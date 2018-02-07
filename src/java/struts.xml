@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">
+<struts>
+    <constant name="struts.custom.i18n.resources" value="ApplicationResources"/>
+    <package name="default" extends="struts-default" >
+        
+        <action name="SaveLeavePeriod" class="dto.Leave" method="saveLeavePeriod">
+        </action>
+        
+        <action name="GetLeavePeriod" class="dto.Leave" method="showCurrentLeavePeriod">
+            <result name="success">jsp/LeavePeriodFound.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        
+        <action name="GetOtherLeavePeriods" class="dto.Leave" method="showAllLeavePeriod">
+            <result name="success">jsp/OtherLeavePeriods.jsp</result>
+             <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="DisplayAllLeavePeriods" class="dto.Leave" method="showAllLeavePeriod">
+            <result name="success">jsp/LeavePeriods.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="LeaveReportLeavePeriods" class="dto.Leave" method="showAllLeavePeriod">
+            <result name="success">jsp/LeaveReport_leavePeriods.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="LeaveReportLeavePeriods2" class="dto.Leave" method="showAllLeavePeriod">
+            <result name="success">jsp/LeaveReport_leavePeriods2.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="SaveLeaveType" class="dto.Leave" method="setLeaveType">
+            <result name="success">jsp/LeaveTypeList.jsp</result>
+            <result name="failure">jsp/Failure.jsp</result>
+        </action><!--
+-->        
+        <action name="DisplayLeaveType" class="dto.Leave" method="showLeaveTypes">
+            <result name="success">jsp/LeaveTypeList.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="LeaveReportLeaveTypes" class="dto.Leave" method="showLeaveTypes">
+            <result name="success">jsp/LeaveReport_leaveType.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="DeleteleaveType" class="dto.Leave" method="deleteLeavetypes">
+            <!--            <result name="success">jsp/LeaveTypeList.jsp</result>
+            <result name="failure">jsp/Failure.jsp</result>-->
+        </action><!--
+        
+-->        
+        <action name="GetLeaveType" class="dto.Leave" method="getOneLeaveType">
+            <result name="success">jsp/LeaveType.jsp</result>
+            <result name="failure">jsp/Failure.jsp</result>
+        </action>       <!--
+        
+-->        
+        <action name="UpdateLeaveType" class="dto.Leave" method="updateLeaveType">
+            <result name="success">jsp/LeaveTypeList.jsp</result>
+            <result name="failure">jsp/Failure.jsp</result>
+        </action>
+        <action name="SaveWorkWeek" class="dto.WorkWeek" method="saveWorkWeek">
+            <result name="success">jsp/WorkWeek.jsp</result>
+            <result name="failure">jsp/Failure.jsp</result>
+        </action> 
+        <action name="ShowWorkWeek" class="dto.WorkWeek" method="showWorkWeek">
+            <result name="success">jsp/WorkWeek.jsp</result>
+            <result name="failure">jsp/NoWorkWeek.jsp</result>
+        </action>
+        <action name="EditWorkWeek" class="dto.WorkWeek" method="editWorkWeek">
+            <result name="success">jsp/NoWorkWeek.jsp</result>
+            
+        </action>
+        <action name="SaveHoliday" class="dto.Holiday" method="saveHoliday">
+            <result name="success">jsp/Success.jsp</result>
+            <result name="failure">jsp/Failure.jsp</result>
+        </action>
+        
+        <action name="SearchHoliday" class="dto.Holiday" method="searchHoliday">
+            <result name="success">jsp/Holidays.jsp</result>
+            <result name="failure">jsp/NoHolidays.jsp</result>
+        </action>
+        
+        <action name="GetOneHoliday" class="dto.Holiday" method="getOneHoliday">
+            <result name="success">jsp/OneHoliday.jsp</result><!--
+            <result name="failure">jsp/Failure.jsp</result>-->
+        </action>
+        
+        <action name="UpdateHoliday" class="dto.Holiday" method="updateHoliday">
+            <result name="success">jsp/OneHolidayUpdated.jsp</result><!--
+            <result name="failure">jsp/Failure.jsp</result>-->
+        </action>
+        
+        <action name="ShowOneHoliday" class="dto.Holiday" method="getOneHoliday">
+            <result name="success">jsp/CancelledUpdateHoliday.jsp</result><!--
+            <result name="failure">jsp/Failure.jsp</result>-->
+        </action>
+        
+        <action name="DeleteHoliday" class="dto.Holiday" method="deleteHoliday">
+            <result name="success">jsp/Holidays.jsp</result>
+            <result name="failure">jsp/NoHolidays.jsp</result>
+        </action>
+        
+        <action name="ShowLeaveTypes" class="dto.Leave" method="showLeaveTypes">
+            <result name="success">jsp/LeaveTypesSelect.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="ListAllLeaveTypes" class="dto.Leave" method="showLeaveTypes">
+            <result name="success">jsp/LeaveTypesSelect2.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="EmployeeValidate" class="dto.Employee" method="employeeSearch">
+            <result name="success">jsp/EmployeeList.jsp</result>
+        </action>
+        <action name="GetEmployeeName" class="dto.Employee" method="fetchEmployeeName">
+            <result name="success">jsp/OneEmployee.jsp</result>
+        </action>
+        <action name="getAllLocations" class="dto.Location" method="getAllLocations">
+            <result name="success">jsp/AllLocations.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="getAllSubUnits" class="dto.Location" method="getAllSubUnits">
+            <result name="success">jsp/AllSubunits.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>   
+        <action name="saveEntitlement" class="dto.Entitlement" method="saveEntitlement">
+            <result name="success">jsp/Success.jsp</result>
+            <result name="failure">jsp/InvalidEmployee.jsp</result>
+        </action> 
+        <action name="searchEntitlement" class="dto.Entitlement" method="searchEntitlement">
+            <result name="success">jsp/EntitlementsList.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="LeavePeriodSelect" class="dto.Leave" method="showAllLeavePeriod">
+            <result name="success">jsp/LeavePeriodSelect.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="AllLeaveTypes" class="dto.Leave" method="showLeaveTypes">
+            <result name="success">jsp/LeaveTypeSelect.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="LeaveApplyLeaveTypes" class="dto.Leave" method="showLeaveTypes">
+            <result name="success">jsp/LeaveTypeSelect2.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="CalculateLeaveBal" class="dto.Leave" method="calculateLeaveBal">
+            <result name="success">jsp/LeaveBalanceFound.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="ApplyLeave" class="dto.Leave" method="applyLeave">
+            <result name="success">jsp/Success.jsp</result>
+            <result name="failure">jsp/Failure.jsp</result>
+        </action>
+        <action name="ShowLeaveList" class="dto.Leave" method="showLeaveList">
+            <result name="success">jsp/LeaveList.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="AddComment" class="dto.Leave" method="addComment">
+            <result name="success">jsp/AddComment.jsp</result>
+        </action>
+        <action name="UpdateLeave" class="dto.Leave" method="updateLeave">
+            <result name="success">jsp/LeaveList.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="LeaveReportAllLocations" class="dto.Location" method="getAllLocations">
+            <result name="success">jsp/LeaveReport_AllLocations.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="LeaveReportAllSubunits" class="dto.Location" method="getAllSubUnits">
+            <result name="success">jsp/LeaveReport_AllSubunits.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+         <action name="ViewLeaveReport" class="dto.Leave" method="viewLeaveReport">
+            <result name="success">jsp/LeaveReport.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+        <action name="LeaveListSubunits" class="dto.Location" method="getAllSubUnits">
+            <result name="success">jsp/LeaveList_Subunits.jsp</result>
+            <result name="failure">jsp/NoRecords.jsp</result>
+        </action>
+    </package>
+</struts>    

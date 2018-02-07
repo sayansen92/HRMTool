@@ -1,0 +1,78 @@
+<!--<!DOCTYPE html>
+
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+
+<html>
+    <head>
+        <title>HRM Tool</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src="js/alljavascripts.js"></script>
+        <style>
+            div.row{margin-bottom: 20px;}
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#">Admin</a></li>
+                    <li><a href="#">PIM</a></li>
+                    <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Leave<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="javascript:showdiv('leavePeriod');">Configure Leave period</a></li>
+                            <li><a href="javascript:showdiv('leaveTypes');">Configure Leave Types</a></li>
+                            <li><a href="#">Entitlements</a></li>
+                            <li><a href="#">Reports</a></li>
+                            <li><a href="#">Leave List</a></li>
+                            <li><a href="#">Assign Leave</a></li>
+                        </ul>
+                    </li>  
+                    <li><a href="#">Time</a></li>
+                    <li><a href="#">Recruitment</a></li> 
+                    <li><a href="#">Performance</a></li> 
+                    <li><a href="#">Dashboard</a></li> 
+                    <li><a href="#">Directory</a></li> 
+                </ul>
+            </div>
+        </nav>
+        <div class="container-fluid">
+            <form id="leavePeriod" style="display:none" title="Leave Period">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label for="startDate">Start Period:</label>
+                            <input type="date" id="startDate"/></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label for="endDate">End Period:</label>
+                            <input type="date" id="endDate"/></div>
+                    </div>
+                     </div>
+                <button type="button" class="btn btn-xs" id="btn1" title="Saves the dates" onclick="leavePeriod()">Save</button>
+                <button type="button" class="btn btn-xs" id="btn1" title="Resets the dates" onclick="reset('leavePeriod')">Reset</button>
+
+            </form>
+        </div>
+                <div class="container-fluid">
+            <form id="leaveTypes" style="display:none" title="Leave Type">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <label for="leaveTypeName">Type name:</label>
+                            <input type="text" id="leaveTypeName"/></div>
+                    </div>
+                    </div>
+                <button type="button" class="btn btn-xs" id="btn1" onclick="leaveTypes()">Save</button>
+                <button type="button" class="btn btn-xs" id="btn1" onclick="reset('leaveTypes')">Cancel</button>
+            </form>
+        </div>
+    </body>
+</html>-->
